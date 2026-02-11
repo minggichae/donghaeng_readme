@@ -42,7 +42,7 @@
 | 프로필                                                    | 이름   | 역할       | 담당 페이지                                                                                                             | GitHub                                  |
 | --------------------------------------------------------- | ------ | ---------- | ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
 | <img src="https://github.com/minggichae.png" width="100"> | 채민기 | 팀장, PM   | - 마이페이지, 수정페이지<br/> - 지도 페이지<br/> - 알림 페이지<br/> - 필터 컴포넌트                                     | [GitHub](https://github.com/minggichae) |
-| <img src="https://github.com/holyhw.png" width="100">     | 유현욱 | 팀원, PL   | - 헤더, 푸터 컴포넌트<br/> - 메인페이지, AI 추천<br/> - 모임/참여자 관리<br/> - 채팅 페이지<br/> - 북마크 컴포넌트, 페이지 | [GitHub](https://github.com/holyhw)     |
+| <img src="https://github.com/holyhw.png" width="100">     | 유현욱 | 팀원, PL   | - 헤더, 푸터 컴포넌트<br/> - 메인페이지, AI 추천<br/> - 모임/참여자 관리 페이지<br/> - 채팅 페이지<br/> - 북마크 버튼 컴포넌트<br/> - 북마크 페이지 | [GitHub](https://github.com/holyhw)     |
 | <img src="https://github.com/kkhhjjoo.png" width="100">   | 김현주 | 팀원, 서기 | - 모임 리스트 페이지<br/> - 모임 상세 페이지                                                                             | [GitHub](https://github.com/kkhhjjoo)   |
 | <img src="https://github.com/jian526.png" width="100">    | 김지안 | 팀원, 발표 | - 로그인, 회원가입 페이지<br/> - 모임 등록 페이지<br/> - 모임 수정 페이지<br/> - 모임 조회 페이지                       | [GitHub](https://github.com/jian526)    |
 

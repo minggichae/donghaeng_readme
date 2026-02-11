@@ -1,109 +1,135 @@
-## Moa (모아) - 취미 공유 플랫폼
+# Moa (모아) - 취미 공유 플랫폼
 
-지도 기반 모임탐색과 AI맞춤 모의 추천을 통한 취미 공유 커뮤니티 플랫폼입니다.
+지도 기반 모임 탐색과 AI 맞춤 모임 추천을 통한 취미 공유 커뮤니티 플랫폼입니다.
 
+<!-- 배너 이미지 추가 시 주석 해제
 ![banner-image](docs/images/배너.png)
+-->
 
 ## 📋 프로젝트 개요
 
 취미 중심 사용자 연결을 통한 간편한 모임 참여 플랫폼입니다.
-지도 기반 모임 탐색, AI 맞춤 모임 추천, 1:1 채팅 기능을 제공하여
+지도 기반 모임 탐색, AI 맞춤 모임 추천, 1:1 실시간 채팅 기능을 제공하여
 부담 없이 새로운 경험을 시작할 수 있도록 돕습니다.
-[사이트 바로가기](https://final-07-moa-release.vercel.app/)
+
+🔗 [사이트 바로가기](https://final-07-moa-release.vercel.app/)
 
 ## 📌 주요 기능
 
-### 취미 중심 사용자 기반 모임 플랫폼:
+### 취미 중심 모임 플랫폼
 
-- 사용자 계정 인증을 통한 서비스 접근 제공
-- 검색 기능 지원
-- 채팅 기능 지원
-- AI 성향 기반 모임 추천
-- 카테고리별, 최신순으로 정렬
-- 필터 선택시 즉시 결과 반영
+- 사용자 계정 인증을 통한 서비스 접근
+- 키워드 검색 기능
+- Socket.io 기반 1:1 실시간 채팅
+- OpenAI GPT를 활용한 AI 성향 기반 모임 추천
+- 카테고리별, 최신순 정렬
+- 다중 필터 선택 시 즉시 결과 반영 (지역, 날짜, 성별, 나이대)
 
-### 지도 기반 모임 사이트:
+### 지도 기반 모임 탐색
 
-- 마커 클릭시 커스텀 오버레이 호출
-- 바로가기 클릭시 모임 상세로 이동
+- 카카오맵 API 연동
+- 마커 클릭 시 커스텀 오버레이 호출
+- 바로가기 클릭 시 모임 상세로 이동
+- 필터를 통한 지역별 모임 검색
 
-### 마이페이지로 사용자 관리 편리성:
+### 마이페이지 관리
 
-- 모임 관리하기
-- 북마크 버튼 클릭시 북마크 추가/삭제 가능
-- 모임 조회(참여전, 참여후)
+- 프로필 정보 수정 (닉네임, 지역, 나이, 성별, 자기소개)
+- 모임 관리하기 (신청자 승인/거절)
+- 북마크 추가/삭제
+- 모임 조회 (참여 전/참여 후/전체)
+
+### 모임 생명주기 관리
+
+- 모임 등록 (이미지, 질문지 포함)
+- 모임 수정/삭제
+- 모임 신청 및 질문지 답변
+- 신청자 관리 및 알림 전송
 
 ## 📅 개발 기간
 
-2026.1.14 ~ 2026.02.13
+2026.01.14 ~ 2026.02.13
 
 ## 👥 프로젝트 팀 소개
 
-| 프로필                                                    | 이름   | 역할       | 담당 페이지                                                                                                             | GitHub                                  |
-| --------------------------------------------------------- | ------ | ---------- | ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
-| <img src="https://github.com/minggichae.png" width="100"> | 채민기 | 팀장, PM   | - 마이페이지, 수정페이지<br/> - 지도 페이지<br/> - 알림 페이지<br/> - 필터 컴포넌트                                     | [GitHub](https://github.com/minggichae) |
-| <img src="https://github.com/holyhw.png" width="100">     | 유현욱 | 팀원, PL   | - 헤더, 푸터 컴포넌트<br/> - 메인페이지, AI 추천<br/> - 모임/참여자 관리 페이지<br/> - 채팅 페이지<br/> - 북마크 버튼 컴포넌트<br/> - 북마크 페이지 | [GitHub](https://github.com/holyhw)     |
-| <img src="https://github.com/kkhhjjoo.png" width="100">   | 김현주 | 팀원, 서기 | - 모임 리스트 페이지<br/> - 모임 상세 페이지                                                                             | [GitHub](https://github.com/kkhhjjoo)   |
-| <img src="https://github.com/jian526.png" width="100">    | 김지안 | 팀원, 발표 | - 로그인, 회원가입 페이지<br/> - 모임 등록 페이지<br/> - 모임 수정 페이지<br/> - 모임 조회 페이지                       | [GitHub](https://github.com/jian526)    |
+| 프로필 | 이름 | 역할 | 담당 페이지 | GitHub |
+| :---: | :---: | :---: | :--- | :---: |
+| <img src="https://github.com/minggichae.png" width="80"> | 채민기 | 팀장, PM | 마이페이지, 수정페이지<br/>지도 페이지<br/>알림 페이지<br/>필터 컴포넌트 | [GitHub](https://github.com/minggichae) |
+| <img src="https://github.com/holyhw.png" width="80"> | 유현욱 | 팀원, PL | 헤더, 푸터 컴포넌트<br/>메인페이지, AI 추천<br/>모임/참여자 관리 페이지<br/>채팅 페이지<br/>북마크 기능 | [GitHub](https://github.com/holyhw) |
+| <img src="https://github.com/kkhhjjoo.png" width="80"> | 김현주 | 팀원, 서기 | 모임 리스트 페이지<br/>모임 상세 페이지 | [GitHub](https://github.com/kkhhjjoo) |
+| <img src="https://github.com/jian526.png" width="80"> | 김지안 | 팀원, 발표 | 로그인, 회원가입 페이지<br/>모임 등록/수정 페이지<br/>모임 조회 페이지 | [GitHub](https://github.com/jian526) |
 
-## ⚙️기술 스택
+## ⚙️ 기술 스택
 
-| 분류             | 기술                                                                                                                                                                                                                                                                                                                                                                                                      |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **프론트엔드**   | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white) ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)                                                                                 |
-| **상태 관리**    | ![Zustand](https://img.shields.io/badge/Zustand-000000?style=flat-square)                                                                                                                                                                                                                             |
-| **백엔드/DB**    | ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)                                                                                                                                                                                                                                                                                                    |
-| **API**          | ![Kakao](https://img.shields.io/badge/Kakao_Map_API-FFCD00?style=flat-square&logo=kakao&logoColor=black) ![OpenAI](https://img.shields.io/badge/OpenAI_API-412991?style=flat-square&logo=openai&logoColor=white)                                                                                                                                                                                          |
-| **UI/UX**        | ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white)                                                                                                                                                                                                                                                                                                          |
-| **개발 환경**    | ![VS Code](https://img.shields.io/badge/Visual_Studio_Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)                                                                                                                                                                                                                                                                                |
-| **협업 툴** | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white) ![Discord](https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=discord&logoColor=white) ![Notion](https://img.shields.io/badge/Notion-000000?style=flat-square&logo=notion&logoColor=white) |
-| **배포**         | ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)                                                                                                                                                                                                                                                                                                       |
+| 분류 | 기술 |
+| :--- | :--- |
+| **프론트엔드** | ![Next.js](https://img.shields.io/badge/Next.js_16-000000?style=flat-square&logo=nextdotjs&logoColor=white) ![React](https://img.shields.io/badge/React_19-61DAFB?style=flat-square&logo=react&logoColor=black) ![TypeScript](https://img.shields.io/badge/TypeScript_5-3178C6?style=flat-square&logo=typescript&logoColor=white) |
+| **상태 관리** | ![Zustand](https://img.shields.io/badge/Zustand_5-000000?style=flat-square) |
+| **스타일링** | ![CSS Modules](https://img.shields.io/badge/CSS_Modules-1572B6?style=flat-square&logo=css3&logoColor=white) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS_4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white) |
+| **실시간 통신** | ![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=flat-square&logo=socketdotio&logoColor=white) |
+| **API** | ![Kakao](https://img.shields.io/badge/Kakao_Map_API-FFCD00?style=flat-square&logo=kakao&logoColor=black) ![OpenAI](https://img.shields.io/badge/OpenAI_API-412991?style=flat-square&logo=openai&logoColor=white) |
+| **UI 컴포넌트** | ![HeadlessUI](https://img.shields.io/badge/Headless_UI-66E3FF?style=flat-square&logo=headlessui&logoColor=black) ![Swiper](https://img.shields.io/badge/Swiper-6332F6?style=flat-square&logo=swiper&logoColor=white) |
+| **UI/UX 디자인** | ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white) |
+| **개발 환경** | ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white) |
+| **협업 툴** | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white) ![Discord](https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=discord&logoColor=white) ![Notion](https://img.shields.io/badge/Notion-000000?style=flat-square&logo=notion&logoColor=white) |
+| **배포** | ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white) |
+| **이미지 호스팅** | ![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?style=flat-square&logo=cloudinary&logoColor=white) |
 
-## 📚 라이브러리 사용 이유
+## 📚 라이브러리 선정 이유
 
-| 기술 스택   | 도입 이유                                                                 |
-| ----------- | ------------------------------------------------------------------------- |
-| React       | 컴포넌트 기반 아키텍처를 통한 UI 재사용성 및 개발 생산성 향상             |
-| Next.js     | 서버 사이드 렌더링(SSR)과 파일 기반 라우팅을 통한 성능 최적화 및 SEO 개선 |
-| Zustand     | 간결한 API와 보일러플레이트 최소화를 통한 효율적인 전역 상태 관리         |
-| CSS Modules | 스코프 격리를 통한 스타일 충돌 방지 및 컴포넌트 단위 스타일 관리          |
+| 기술 스택 | 도입 이유 |
+| :--- | :--- |
+| React | 컴포넌트 기반 아키텍처를 통한 UI 재사용성 및 개발 생산성 향상 |
+| Next.js | 서버 사이드 렌더링(SSR)과 파일 기반 라우팅을 통한 성능 최적화 및 SEO 개선, App Router를 활용한 Server Actions 지원 |
+| Zustand | 간결한 API와 보일러플레이트 최소화를 통한 효율적인 전역 상태 관리, localStorage persist 기능으로 새로고침 시 상태 유지 |
+| CSS Modules | 스코프 격리를 통한 스타일 충돌 방지 및 컴포넌트 단위 스타일 관리 |
+| Socket.io | 실시간 양방향 통신으로 1:1 채팅 및 읽음 상태 추적 기능 구현 |
+| OpenAI API | GPT-4o-mini 모델을 활용한 사용자 맞춤형 모임 카테고리 추천 |
+| Kakao Map API | 지역 기반 모임 위치 시각화 및 지도 탐색 기능 |
+| Headless UI | 접근성을 고려한 UI 컴포넌트 (모달, 드롭다운 등) |
+| Swiper | 메인 페이지 배너 및 카테고리 캐러셀 구현 |
 
-## 🖥️ 화면 구성 -> 다시 제작 필요
+## 🎯 지원 카테고리
+
+운동 · 요리/제조 · 문화/공연/축제 · 게임/오락 · 인문학/책/글 · 아웃도어/여행 · 사교 · 음악/악기 · 업종/직무 · 외국/언어 · 공예/만들기 · 댄스/무용 · 봉사활동 · 사진/영상 · 자기계발 · 스포츠 관람
+
+## 🖥️ 화면 구성
 
 ### 🔐 로그인/회원가입
 
-- 이메일 로그인 가능
+- 이메일 로그인
 - 회원가입 시 각 항목별 유효성 검사
+- 토큰 기반 인증 (accessToken, refreshToken)
 
-| 데스크톱                                       | 모바일                                                    |
-| ---------------------------------------------- | --------------------------------------------------------- |
-| <img src="docs/gif/회원가입.gif" width="500"/> | <img src="docs/gif/회원가입_모바일버전.gif" width="200"/> |
-| <img src="docs/gif/로그인.gif" width="500"/>   | <img src="docs/gif/로그인_모바일버전.gif" width="200"/>   |
+| 데스크톱 | 모바일 |
+| :---: | :---: |
+| ![회원가입](docs/images/wireframe-register.png) | ![로그인](docs/images/wireframe-login.png) |
 
 ---
 
 ### 🏠 홈화면
 
 - 메인 배너 및 서비스 안내
-- 모임 리스트 추천
-- 지도 미리보기: 카카오맵 연동
-- 검색 기능: 키워드 및 카테고리 검색
+- 카테고리별 모임 리스트 추천
+- 지도 미리보기 (카카오맵 연동)
+- 키워드 검색 기능
+- AI 추천 모달
 
-| 데스크톱                                     | 모바일                                                  |
-| -------------------------------------------- | ------------------------------------------------------- |
-| <img src="docs/gif/홈화면.gif" width="500"/> | <img src="docs/gif/홈화면_모바일버전.gif" width="200"/> |
+| 데스크톱 |
+| :---: |
+| ![홈화면](docs/images/wireframe-mainpage.png) |
 
 ---
 
 ### 📋 모임목록
 
-- 카테고리별, 필터별 검색
+- 카테고리별, 필터별 검색 (지역, 날짜, 성별, 나이대)
 - 북마크 기능
+- 무한 스크롤 지원
 
-| 데스크톱                                          | 모바일                                                      |
-| ------------------------------------------------- | ----------------------------------------------------------- |
-| <img src="docs/gif/모임리스트.gif" width="500"/>  | <img src="docs/gif/모임리스트_모바일버전.gif" width="200"/> |
-| <img src="docs/gif/모임리스트2.gif" width="500"/> |                                                             |
+| 데스크톱 |
+| :---: |
+| ![모임목록](docs/images/wireframe-meetup-list.png) |
 
 ---
 
@@ -112,32 +138,23 @@
 - 상세 정보 조회
 - 주최자 프로필 확인
 - 모임 신청, 관리, 수정, 삭제
+- 주최자와 1:1 채팅
 
-| 데스크톱                                         | 모바일                                                      |
-| ------------------------------------------------ | ----------------------------------------------------------- |
-| <img src="docs/gif/상세페이지.gif" width="500"/> | <img src="docs/gif/상세페이지_모바일버전.gif" width="200"/> |
+| 데스크톱 |
+| :---: |
+| ![모임상세](docs/images/wireframe-meetup-detail.png) |
 
 ---
 
 ### ➕ 모임등록
 
 - 모임 제목, 카테고리, 설명, 날짜, 장소, 성별, 나이, 인원 설정
-- 모임 이미지 업로드
-- 질문지 작성
+- 모임 이미지 업로드 (Cloudinary)
+- 질문지 작성 (최대 2개)
 
-| 데스크톱                                       | 모바일                                                    |
-| ---------------------------------------------- | --------------------------------------------------------- |
-| <img src="docs/gif/모임등록.gif" width="500"/> | <img src="docs/gif/모임등록_모바일버전.gif" width="200"/> |
-
----
-
-### ✏️ 모임수정
-
-- 기존 모임의 요소 수정
-
-| 데스크톱                                       | 모바일                                                    |
-| ---------------------------------------------- | --------------------------------------------------------- |
-| <img src="docs/gif/모임수정.gif" width="500"/> | <img src="docs/gif/모임수정_모바일버전.gif" width="200"/> |
+| 데스크톱 |
+| :---: |
+| ![모임등록](docs/images/wireframe-meetup-create.png) |
 
 ---
 
@@ -146,42 +163,43 @@
 - 질문지 답변
 - 신청 관리
 
-| 데스크톱                                       | 모바일                                                    |
-| ---------------------------------------------- | --------------------------------------------------------- |
-| <img src="docs/gif/모임신청.png" width="500"/> | <img src="docs/gif/모임신청_모바일버전.gif" width="200"/> |
+| 데스크톱 |
+| :---: |
+| ![모임신청](docs/images/wireframe-meetup-apply.png) |
 
 ---
 
 ### 👀 모임조회
 
 - 전체, 참여 전, 참여 후 구분 표시
+- 신청 대기/승인/거절 상태 표시
 
-| 데스크톱                                       | 모바일                                                    |
-| ---------------------------------------------- | --------------------------------------------------------- |
-| <img src="docs/gif/모임조회.gif" width="500"/> | <img src="docs/gif/모임조회_모바일버전.gif" width="200"/> |
+| 데스크톱 |
+| :---: |
+| ![모임조회](docs/images/wireframe-meetup-history.png) |
 
 ---
 
 ### ⭐ 북마크
 
-- 북마크 토글로 목록 추가/제거 가능
+- 북마크 토글로 목록 추가/제거
 
-| 데스크톱                                     | 모바일                                                  |
-| -------------------------------------------- | ------------------------------------------------------- |
-| <img src="docs/gif/북마크.gif" width="500"/> | <img src="docs/gif/북마크_모바일버전.gif" width="200"/> |
+| 데스크톱 |
+| :---: |
+| ![북마크](docs/images/wireframe-bookmark.png) |
 
 ---
 
 ### 👤 마이페이지
 
 - 프로필 수정
-- 관리하기
-- 모임조회
+- 모임 관리
+- 모임 조회
 - 북마크 연결
 
-| 데스크톱                                         | 모바일                                                      |
-| ------------------------------------------------ | ----------------------------------------------------------- |
-| <img src="docs/gif/마이페이지.png" width="500"/> | <img src="docs/gif/마이페이지_모바일버전.png" width="200"/> |
+| 프로필 | 수정 |
+| :---: | :---: |
+| ![마이페이지](docs/images/wireframe-mypage-profile.png) | ![수정](docs/images/wireframe-mypage-edit.png) |
 
 ---
 
@@ -192,9 +210,18 @@
 - 승인/거절 처리
 - 알림 전송
 
-| 데스크톱                                         | 모바일                                                      |
-| ------------------------------------------------ | ----------------------------------------------------------- |
-| <img src="docs/gif/관리페이지.gif" width="500"/> | <img src="docs/gif/관리페이지_모바일버전.png" width="200"/> |
+| 데스크톱 |
+| :---: |
+| ![관리페이지](docs/images/wireframe-participant-manage.png) |
+
+---
+
+### 💬 채팅
+
+- Socket.io 기반 실시간 1:1 채팅
+- 읽지 않은 메시지 수 표시
+- 메시지 읽음 상태 추적
+- 채팅방 나가기 기능
 
 ---
 
@@ -202,294 +229,247 @@
 
 - 필터로 모임 필터링
 - 지역별 모임 위치 표시 (카카오맵 API)
+- 마커 클릭 시 모임 정보 오버레이
 
-| 데스크톱                                         | 모바일                                                      |
-| ------------------------------------------------ | ----------------------------------------------------------- |
-| <img src="docs/gif/지도페이지.gif" width="500"/> | <img src="docs/gif/지도페이지_모바일버전.gif" width="200"/> |
+| 데스크톱 |
+| :---: |
+| ![지도페이지](docs/images/wireframe-map.png) |
+
+---
+
+### 🔔 알림
+
+- 모임 신청 알림
+- 승인/거절 알림
+- 알림 읽음 상태 관리
+
+| 데스크톱 |
+| :---: |
+| ![알림](docs/images/wireframe-notification.png) |
 
 ---
 
 ### 🤖 AI 추천
 
-- AI 기반 모임 추천 결과 제공
-
-| 데스크톱                                 | 모바일                                              |
-| ---------------------------------------- | --------------------------------------------------- |
-| <img src="docs/gif/ai.gif" width="500"/> | <img src="docs/gif/ai_모바일버전.gif" width="200"/> |
+- 사용자 정보 입력 (나이, 성별, 선호도)
+- OpenAI GPT-4o-mini를 통한 맞춤 카테고리 추천
+- 추천 카테고리 기반 모임 필터링
 
 ---
 
-### 💬 1:1 채팅
-
-- 주최자와 실시간 채팅
-
-| 데스크톱                                   | 모바일                                                |
-| ------------------------------------------ | ----------------------------------------------------- |
-| <img src="docs/gif/채팅.png" width="500"/> | <img src="docs/gif/채팅_모바일버전.png" width="200"/> |
-
----
-
-## 🔄 워크플로우
-
-<div align="center">
-  <img src="docs/images/워크플로우.png" alt="워크플로우" width="600">
-</div>
-
-## 🐛 트러블슈팅
-
-| 이름     | 문제점                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | 해결 방법                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **민기** | -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| **현욱** | -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| **현주** | 북마크 클릭 시 여러 개가 동시에 선택되는 버그 발생. `git pull`을 받지 않아 최신 코드가 누락됨.                                                                                                                                                                                                                                                                                                                                                                                                             | `git pull`, `git merge`를 통해 최신 코드 동기화 후 해결                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| **지안** | 1. **Git 브랜치 동기화 문제**: `develop` 브랜치에서 `git pull`이 정상적으로 되지 않는 문제 발생<br/>2. **CSS Module `:global` 사용 문제**: CSS Module에서 `:global`을 사용하면서 스타일이 전역으로 적용되어 다른 페이지에도 영향을 주는 문제 발생<br/>3. **로그인 상태 유지 문제**: 로그인 여부를 `useState`로만 판단해 로그인되지 않았을 경우 로그인 페이지로 강제 이동하도록 구현했는데, 새로고침 시 로그인 상태에서도 로그인 화면으로 이동하는 문제 발생. Hydration 이전 상태를 `false`로 인식했기 때문 | 1. **Git 동기화 해결**: rebase 사용 시 발생하는 히스토리 오염 문제를 팀원들에게 공유. 이후 `git pull`이 되지 않는 경우 `rebase` 대신 `merge` 전략을 사용하도록 협업 방식을 정리하여 develop 브랜치와의 버전을 안정적으로 맞춤<br/>2. **CSS 격리**: `:global` 사용을 최소화하고, 필요한 경우 더 구체적인 선택자를 사용하여 적용 범위를 제한. 컴포넌트 단위로 스타일이 격리되도록 구조 개선<br/>3. **Hydration 처리**: `useStore.ts`에 `setHasHydrated`를 추가하여 상태가 hydration된 이후에만 로그인 여부를 판단하도록 수정. 새로고침 시에도 로그인 상태가 정상적으로 유지되도록 개선 |
-
-## 🏗 시스템 아키텍처
+## 🏗️ 시스템 아키텍처
 
 ### 기술 구성
 
-- **Frontend**: React + Next.js (App Router)
-- **Styling**: CSS Module
-- **상태 관리**: Zustand (sessionStorage persist)
+- **Frontend**: React 19 + Next.js 16 (App Router)
+- **Styling**: CSS Modules + Tailwind CSS v4
+- **상태 관리**: Zustand (localStorage persist)
 - **서버 통신**: Fetch API + Next.js Server Actions
+- **실시간 통신**: Socket.io (채팅, 알림)
 - **캐시/갱신**: fetch 캐시 태그 + revalidateTag, revalidatePath
 
 ### 데이터 흐름
 
-1. **조회**: 서버 컴포넌트에서 게시글/댓글 데이터 fetch
+1. **조회**: 서버 컴포넌트에서 모임/사용자 데이터 fetch
 2. **생성/수정/삭제**: Server Action으로 API 호출
 3. **캐시 갱신**: 성공 시 자동으로 캐시 업데이트
 4. **인증**: 로그인 성공 시 Zustand store에 사용자 정보 저장
+5. **실시간**: Socket.io로 채팅 메시지 및 알림 수신
 
 ### API 통신
 
 - 모든 요청에 `Client-Id` 헤더 포함
 - 인증이 필요한 요청은 `Authorization: Bearer <token>` 헤더 사용
 - 서버 측에서 권한 검증 수행
+- 401 에러 시 자동 토큰 갱신 (refreshToken 사용)
+
+### Zustand Store 구성
+
+| Store | 역할 |
+| :--- | :--- |
+| `userStore` | 로그인 상태, 사용자 정보, 토큰 관리 |
+| `chatStore` | Socket.io 연결, 채팅방/메시지 상태 |
+| `bookmarkStore` | 북마크 목록, 추가/삭제 상태 |
+| `notificationStore` | 알림 목록, 읽음 상태 |
+| `meetingStore` | 현재 선택된 모임 정보 |
+
+## ♿ 접근성
+
+- WCAG 기준에 따른 스크린리더 지원
+- `aria-label`, `aria-expanded`, `aria-live` 속성 활용
+- 시맨틱 HTML 태그 사용 (nav, main, section)
+- 폼 에러 메시지 접근성 개선
+- 스크린 리더 전용 텍스트 (sr-only) 제공
 
 ## 🔐 보안 및 정책
 
 - 인증 필요 기능은 로그인 사용자만 접근 가능
 - 수정/삭제는 작성자 본인만 가능
 - 토큰은 localStorage에 저장
+- HTTPS를 통한 이미지 호스팅 (Cloudinary)
+- 보안 헤더 설정 (X-Content-Type-Options, X-Frame-Options)
 
-## 추가하고 싶은 페이지 및 기능 -> 스켈레톤 ui 진행도에 따라 적을지 말지, 소셜 로그인 기능, 관리자에게 모임 신청 알림 전송
+## 🐛 트러블슈팅
 
-- 
-- 웹 접근성 향상을 위한 시맨틱 구조 및 키보드 네비게이션 적용
-- 번개 중심 서비스에서 커뮤니티 기능으로 확장
+| 이름 | 문제점 | 해결 방법 |
+| :---: | :--- | :--- |
+| **현주** | 북마크 클릭 시 여러 개가 동시에 선택되는 버그 발생. `git pull`을 받지 않아 최신 코드가 누락됨. | `git pull`, `git merge`를 통해 최신 코드 동기화 후 해결 |
+| **지안** | 1. Git 브랜치 동기화 문제: `develop` 브랜치에서 `git pull`이 정상적으로 되지 않음<br/>2. CSS Module `:global` 사용 시 스타일이 전역으로 적용되어 다른 페이지에도 영향<br/>3. 로그인 상태 유지 문제: 새로고침 시 로그인 상태에서도 로그인 화면으로 이동 (Hydration 이전 상태를 false로 인식) | 1. rebase 대신 merge 전략 사용으로 develop 브랜치와 버전 동기화<br/>2. `:global` 사용 최소화, 구체적 선택자로 적용 범위 제한<br/>3. `useStore.ts`에 `setHasHydrated` 추가하여 hydration 이후에만 로그인 여부 판단 |
 
-## 회고 -> 뺄지 말지 고민하기(ppt에 들어있긴함)
+## 🚀 시작하기
 
-- 민기:
-- 현욱:
-- 현주
-  - 좋았던 점: React와 next.js로 프로젝트를 만드는것은 처음이었는데 조원분들의 도움으로 프로젝트를 만들 수 있었고, 문제없이 순항한 것 같아 만족스럽습니다.
-  - 아쉬웠던 점: 4개의 파트를 맡았었는데 저의 안일함으로 지연이 되서 부분은 다른 분들이 맡게 되어 아쉬웠습니다.
-- 지안
-  - 좋았던 점: 좋은 팀원들을 만나 많이 배울 수 있게 되어서 정말 좋았고, Next.js로 웹페이지를 만든 경험이 생겨서 만족스러웠습니다.
-  - 아쉬웠던 점: 브랜치 관리에 대한 이해 부족으로 협업 과정에서 어려움을 겪었으며, 이를 통해 체계적인 Git 활용 능력의 중요성을 깨닫게 되었습니다.
+### 환경 변수 설정
 
-## 📌 스크럼/회의록
+프로젝트 루트에 `.env` 파일을 생성하고 다음 변수를 설정합니다:
 
-### 2026년 1월
+```env
+NEXT_PUBLIC_CLIENT_ID=your-client-id
+NEXT_PUBLIC_API_URL=https://your-api-url
+AI_API_KEY=your-openai-api-key
+NEXT_PUBLIC_KAKAO_MAP_API_KEY=your-kakao-map-api-key
+NEXT_PUBLIC_NOTI_URL=https://your-notification-url
+NEXT_PUBLIC_PRIVATE_CHAT_URL=https://your-chat-url
+```
 
-| 일  |                     월                     |                     화                     |                     수                     |                     목                     |                     금                     | 토  |
-| :-: | :----------------------------------------: | :----------------------------------------: | :----------------------------------------: | :----------------------------------------: | :----------------------------------------: | :-: |
-|     |                                            |                                            |                                            |                     1                      |                     2                      |  3  |
-|  4  |                     5                      |                     6                      |                     7                      |                     8                      |                     9                      | 10  |
-| 11  |                     12                     |                     13                     | [14](docs/dailyscrum/0114-데일리스크럼.md) | [15](docs/dailyscrum/0115-데일리스크럼.md) | [16](docs/dailyscrum/0116-데일리스크럼.md) | 17  |
-| 18  | [19](docs/dailyscrum/0119-데일리스크럼.md) | [20](docs/dailyscrum/0120-데일리스크럼.md) | [21](docs/dailyscrum/0121-데일리스크럼.md) | [22](docs/dailyscrum/0122-데일리스크럼.md) | [23](docs/dailyscrum/0123-데일리스크럼.md) | 24  |
-| 25  | [26](docs/dailyscrum/0126-데일리스크럼.md) | [27](docs/dailyscrum/0127-데일리스크럼.md) | [28](docs/dailyscrum/0128-데일리스크럼.md) | [29](docs/dailyscrum/0129-데일리스크럼.md) | [30](docs/dailyscrum/0130-데일리스크럼.md) | 31  |
+### 설치
 
-### 2026년 2월
+```bash
+npm install
+```
 
-| 일  |                    월                     |                     화                     |                     수                     |                     목                     | 금  | 토  |
-| :-: | :---------------------------------------: | :----------------------------------------: | :----------------------------------------: | :----------------------------------------: | :-: | :-: |
-|  1  | [2](docs/dailyscrum/0202-데일리스크럼.md) | [3](docs/dailyscrum/0203-데일리스크럼.md)  | [4](docs/dailyscrum/0204-데일리스크럼.md)  | [5](docs/dailyscrum/0205-데일리스크럼.md)  |  6  |  7  |
-|  8  | [9](docs/dailyscrum/0209-데일리스크럼.md) | [10](docs/dailyscrum/0210-데일리스크럼.md) | [11](docs/dailyscrum/0211-데일리스크럼.md) | [12](docs/dailyscrum/0212-데일리스크럼.md) | 13  | 14  |
-| 15  |                    16                     |                     17                     |                     18                     |                     19                     | 20  | 21  |
-| 22  |                    23                     |                     24                     |                     25                     |                     26                     | 27  | 28  |
+### 개발 서버 실행
+
+```bash
+npm run dev
+```
+
+[http://localhost:3000](http://localhost:3000)에서 확인할 수 있습니다.
+
+### 빌드
+
+```bash
+npm run build
+```
+
+### 프로덕션 실행
+
+```bash
+npm start
+```
+
+### 린트 검사
+
+```bash
+npm run lint
+```
 
 ## 📁 프로젝트 폴더 구조
 
 ```
 final-07-donghaeng/
 ├── 📁 actions/                    # Server Actions
-│   ├── ai-recommend.ts            # AI 추천 액션
+│   ├── ai-recommend.ts            # AI 추천 (OpenAI GPT)
 │   ├── bookmarks.ts               # 북마크 CRUD
-│   ├── chat.ts                    # 채팅 액션
-│   ├── file.ts                    # 파일 업로드
-│   ├── manage.ts                  # 모임 관리 액션
-│   ├── meetings.ts                # 모임 CRUD
-│   ├── notification.ts            # 알림 액션
-│   └── user.ts                    # 사용자 액션
+│   ├── chat.ts                    # 채팅 메시지 전송
+│   ├── file.ts                    # 파일 업로드 (Cloudinary)
+│   ├── manage.ts                  # 신청자 승인/거절
+│   ├── meetings.ts                # 모임 CRUD, 지원
+│   ├── notification.ts            # 알림 생성/조회
+│   └── user.ts                    # 로그인, 회원가입, 프로필 수정
 │
 ├── 📁 app/                        # Next.js App Router
 │   ├── 📁 (auth)/                 # 인증 그룹
 │   │   ├── 📁 login/              # 로그인
-│   │   │   ├── Login.tsx
-│   │   │   ├── Login.module.css
-│   │   │   └── page.tsx
-│   │   └── 📁 signup/              # 회원가입
-│   │       ├── Signup.tsx
-│   │       ├── signup.module.css
-│   │       └── page.tsx
+│   │   └── 📁 signup/             # 회원가입
 │   │
 │   ├── 📁 (main)/                 # 메인 페이지 그룹
-│   │   ├── AiRecommendModal.tsx
-│   │   ├── CategorySection.tsx
-│   │   ├── MeetingsContent.tsx
-│   │   ├── SearchAiSection.tsx
-│   │   ├── Main.module.css
-│   │   └── page.tsx
+│   │   ├── page.tsx               # 홈 화면
+│   │   ├── AiRecommendModal.tsx   # AI 추천 모달
+│   │   ├── CategorySection.tsx    # 카테고리 섹션
+│   │   └── SearchAiSection.tsx    # 검색 및 AI 섹션
 │   │
 │   ├── 📁 (view)/                 # 뷰 전용 그룹
-│   │   ├── 📁 bookmarks/          # 북마크
-│   │   │   ├── BookmarkContent.tsx
-│   │   │   ├── BookmarkMeetingCard.tsx
-│   │   │   ├── BookmarkSwiper.tsx
-│   │   │   ├── Bookmarks.module.css
-│   │   │   └── page.tsx
+│   │   ├── 📁 bookmarks/          # 북마크 페이지
 │   │   └── 📁 history/            # 지원한 모임 조회
-│   │       ├── HistoryPage.tsx
-│   │       ├── MeetingCard.tsx
-│   │       ├── History.module.css
-│   │       └── page.tsx
 │   │
-│   ├── 📁 chat/                   # 채팅
-│   │   ├── ChatBadge.tsx
-│   │   ├── ChatMain.tsx
-│   │   ├── ChatRoom.tsx
-│   │   ├── ChatRoomItem.tsx
-│   │   ├── ChatRoomList.tsx
-│   │   ├── MessageBubble.tsx
-│   │   ├── *.module.css
-│   │   └── page.tsx
+│   ├── 📁 chat/                   # 채팅 기능
+│   │   ├── page.tsx               # 채팅 리스트
+│   │   └── 📁 [roomId]/           # 채팅 상세
 │   │
-│   ├── 📁 components/              # 공통 컴포넌트
-│   │   ├── Author.tsx              # 채팅 연결 컴포넌트
-│   │   ├── BlankLayout.tsx         # 기본(헤더, 푸터 X)레이아웃
-│   │   ├── BookmarkButton.tsx      # 북마크 버튼 컴포넌트
-│   │   ├── DefaultLayout.tsx       # 기본(헤더, 푸터 O) 레이아웃
-│   │   ├── Filter.tsx              # 필터 컴포넌트
-│   │   ├── Footer.tsx              # 푸터 컴포넌트
-│   │   ├── Header.tsx              # 헤더 컴포넌트
-│   │   ├── MeetingCard.tsx         # 모임 컴포넌트
-│   │   └── MobileSidebar.tsx       # 모바일 사이드바 컴포넌트
-│   │   
+│   ├── 📁 components/             # 공통 컴포넌트
+│   │   ├── Header.tsx             # 헤더
+│   │   ├── Footer.tsx             # 푸터
+│   │   ├── Filter.tsx             # 필터
+│   │   ├── MeetingCard.tsx        # 모임 카드
+│   │   ├── BookmarkButton.tsx     # 북마크 버튼
+│   │   ├── MobileSidebar.tsx      # 모바일 사이드바
+│   │   └── DefaultLayout.tsx      # 기본 레이아웃
 │   │
-│   ├── 📁 manage/                  # 모임 관리
-│   │   ├── ManageContent.tsx       # 내가 등록한 모임
-│   │   ├── ManageSwiper.tsx
-│   │   ├── ManageAllPage.module.css
-│   │   ├── page.tsx
-│   │   └── 📁 [id]/
-│   │       ├── ManageContent.tsx    # 참여자 관리(승인/거절)
-│   │       ├── Manage.module.css
-│   │       └── page.tsx
+│   ├── 📁 manage/                 # 모임 관리
+│   │   ├── page.tsx               # 모임 관리 리스트
+│   │   └── 📁 [id]/               # 참여자 관리
 │   │
-│   ├── 📁 map/                    # 지도
-│   │   ├── KakaoMap.tsx
-│   │   ├── Map.tsx
-│   │   ├── Map.module.css
-│   │   └── page.tsx
+│   ├── 📁 map/                    # 지도 페이지
 │   │
 │   ├── 📁 meetings/               # 모임 리스트
-│   │   ├── Category.tsx
-│   │   ├── FilterMeetingList.tsx
-│   │   ├── MeetingItem.tsx
-│   │   ├── MeetingList.module.css
-│   │   ├── page.tsx
-│   │   ├── 📁 add/                 # 모임 등록
-│   │   │   ├── Add.tsx
-│   │   │   ├── Create.module.css
-│   │   │   └── page.tsx
-│   │   └── 📁 [id]/
-│   │       ├── NavigateButton.tsx
-│   │       ├── Detail.module.css
-│   │       ├── page.tsx
-│   │       ├── 📁 apply/           # 모임 신청
-│   │       │   ├── ApplyForm.tsx
-│   │       │   ├── Apply.module.css
-│   │       │   └── page.tsx
-│   │       └── 📁 edit/            # 모임 수정
-│   │           ├── Edit.tsx
-│   │           ├── Edit.module.css
-│   │           └── page.tsx
+│   │   ├── page.tsx               # 모임 목록
+│   │   ├── 📁 add/                # 모임 등록
+│   │   └── 📁 [id]/               # 모임 상세
+│   │       ├── page.tsx           # 상세 페이지
+│   │       ├── 📁 apply/          # 모임 신청
+│   │       └── 📁 edit/           # 모임 수정
 │   │
 │   ├── 📁 mypage/                 # 마이페이지
-│   │   ├── MyPage.tsx
-│   │   ├── MyPage.module.css
-│   │   ├── page.tsx
-│   │   └── 📁 modify/[id]/        # 수정 페이지
-│   │       ├── Modify.tsx
-│   │       ├── Modify.module.css
-│   │       └── page.tsx
+│   │   ├── page.tsx               # 프로필 페이지
+│   │   └── 📁 modify/[id]/        # 프로필 수정
 │   │
-│   ├── 📁 notifications/          # 알림
-│   │   ├── Notifications.tsx
-│   │   ├── NotificationItem.tsx
-│   │   ├── *.module.css
-│   │   └── page.tsx
+│   ├── 📁 notifications/          # 알림 페이지
 │   │
 │   ├── 📁 faq/                    # FAQ
 │   ├── 📁 privacy/                # 개인정보처리방침
 │   ├── 📁 terms/                  # 이용약관
 │   │
-│   ├── 📁 style/                  # 전역 스타일
-│   │   ├── base.css
-│   │   ├── reset.css
-│   │   └── style.css
-│   │
-│   ├── error.tsx                  # 에러 페이지
-│   ├── globals.css                # 전역 CSS
 │   ├── layout.tsx                 # 루트 레이아웃
-│   ├── loading.tsx                # 로딩 UI
-│   ├── not-found.tsx              # 404 페이지
-│   ├── robots.ts                  # robots.txt
-│   └── sitemap.ts                 # 사이트맵
-│
-├── 📁 docs/                       # 문서/데이터
-│   └── regionData.ts              # 지역 데이터
+│   ├── globals.css                # 전역 스타일
+│   ├── error.tsx                  # 에러 바운더리
+│   └── not-found.tsx              # 404 페이지
 │
 ├── 📁 hooks/                      # 커스텀 훅
-│   ├── useChat.ts                 # 채팅 훅
-│   ├── useFilter.ts               # 필터 훅
+│   ├── useChat.ts                 # 채팅 기능 훅
+│   ├── useFilter.ts               # 필터 상태 훅
 │   └── useNoti.ts                 # 알림 훅
 │
-├── 📁 lib/                        # 유틸리티/API 함수
-│   ├── bookmarks.ts
-│   ├── chat.ts
-│   ├── common.ts
-│   ├── manage.ts
-│   ├── meetings.ts
-│   └── user.ts
+├── 📁 lib/                        # API 함수
+│   ├── meetings.ts                # 모임 조회 API
+│   ├── bookmarks.ts               # 북마크 API
+│   ├── chat.ts                    # 채팅방 API
+│   ├── user.ts                    # 사용자 API
+│   ├── manage.ts                  # 관리 API
+│   ├── notification.ts            # 알림 API
+│   └── common.ts                  # 공통 함수
 │
-├── 📁 public/                     # 정적 파일
-│   ├── 📁 icon/                   # 아이콘
-│   └── 📁 logo/                   # 로고
-│
-├── 📁 types/                      # TypeScript 타입
-│   ├── api.ts
-│   ├── apply.ts
-│   ├── bookmarks.ts
-│   ├── chat.ts
-│   ├── kakaomap.ts
-│   ├── manage.ts
-│   ├── meetings.ts
-│   ├── notification.ts
-│   └── user.ts
+├── 📁 types/                      # TypeScript 타입 정의
+│   ├── api.ts                     # API 응답 타입
+│   ├── meetings.ts                # 모임 인터페이스
+│   ├── user.ts                    # 사용자 타입
+│   ├── chat.ts                    # 채팅 타입
+│   ├── notification.ts            # 알림 타입
+│   ├── bookmarks.ts               # 북마크 타입
+│   ├── manage.ts                  # 관리 타입
+│   └── apply.ts                   # 신청 타입
 │
 ├── 📁 utils/                      # 유틸리티
-│   └── apiWithAuth.ts             # 인증 API 래퍼
+│   └── apiWithAuth.ts             # 인증된 API 호출 (자동 토큰 갱신)
 │
 ├── 📁 zustand/                    # 상태 관리 스토어
-│   ├── bookmarkStore.ts
-│   ├── chatStore.ts
-│   ├── meetingStore.ts
-│   ├── notificationStore.ts
-│   └── userStore.ts
+│   ├── userStore.ts               # 사용자/인증 상태
+│   ├── chatStore.ts               # 채팅/Socket.io 상태
+│   ├── bookmarkStore.ts           # 북마크 상태
+│   ├── meetingStore.ts            # 모임 상태
+│   └── notificationStore.ts       # 알림 상태
+│
+├── 📁 docs/                       # 문서/이미지
+├── 📁 public/                     # 정적 파일
 │
 ├── .env                           # 환경 변수
 ├── next.config.ts                 # Next.js 설정
@@ -499,3 +479,9 @@ final-07-donghaeng/
 ```
 
 ---
+
+<div align="center">
+
+Made with ❤️ by Team Moa
+
+</div>

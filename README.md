@@ -1,16 +1,3 @@
-## 📎 목차
-
-1. [프로젝트 개요](#-프로젝트-개요)
-2. [주요 기능](#-주요-기능)
-3. [프로젝트 팀 소개](#-프로젝트-팀-소개)
-4. [기술 스택](#-기술-스택)
-5. [화면 구성](#-화면-구성)
-6. [워크 플로우](#-워크-플로우)
-7. [트러블 슈팅](#-트러블-슈팅)
-8. [추가하고 싶은 페이지 및 기능](#-추가하고-싶은-페이지-및-기능)
-9. [회고](#-회고)
-10. [스크럼/회의록](#-스크럼/회의록)
-
 ## Moa (모아) - 취미 공유 플랫폼
 
 지도 기반 모임탐색과 AI맞춤 모의 추천을 통한 취미 공유 커뮤니티 플랫폼입니다.
@@ -22,10 +9,7 @@
 취미 중심 사용자 연결을 통한 간편한 모임 참여 플랫폼입니다.
 지도 기반 모임 탐색, AI 맞춤 모임 추천, 1:1 채팅 기능을 제공하여
 부담 없이 새로운 경험을 시작할 수 있도록 돕습니다.
-
-## 🌐 배포 주소
-
-- [배포 URL](https://final-07-moa-release.vercel.app/)
+[사이트 바로가기](https://final-07-moa-release.vercel.app/)
 
 ## 📌 주요 기능
 
@@ -57,9 +41,9 @@
 
 | 프로필                                                    | 이름   | 역할       | 담당 페이지                                                                                                             | GitHub                                  |
 | --------------------------------------------------------- | ------ | ---------- | ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
-| <img src="https://github.com/minggichae.png" width="100"> | 채민기 | 팀원, PM   | - 마이페이지, 수정페이지<br/> - 지도 페이지<br/> - 알림 페이지<br/> - 필터 컴포넌트                                     | [GitHub](https://github.com/minggichae) |
-| <img src="https://github.com/holyhw.png" width="100">     | 유현욱 | 팀원, PL   | - 헤더, 푸터 컴포넌트<br/> - 메인페이지, AI 추천<br/> - 참여자 관리, 모임신청<br/> - 채팅 페이지<br/> - 북마크 컴포넌트 | [GitHub](https://github.com/holyhw)     |
-| <img src="https://github.com/kkhhjjoo.png" width="100">   | 김현주 | 팀원, 서기 | - 모임리스트 페이지<br/> - 모임 상세 페이지                                                                             | [GitHub](https://github.com/kkhhjjoo)   |
+| <img src="https://github.com/minggichae.png" width="100"> | 채민기 | 팀장, PM   | - 마이페이지, 수정페이지<br/> - 지도 페이지<br/> - 알림 페이지<br/> - 필터 컴포넌트                                     | [GitHub](https://github.com/minggichae) |
+| <img src="https://github.com/holyhw.png" width="100">     | 유현욱 | 팀원, PL   | - 헤더, 푸터 컴포넌트<br/> - 메인페이지, AI 추천<br/> - 모임/참여자 관리<br/> - 채팅 페이지<br/> - 북마크 컴포넌트, 페이지 | [GitHub](https://github.com/holyhw)     |
+| <img src="https://github.com/kkhhjjoo.png" width="100">   | 김현주 | 팀원, 서기 | - 모임 리스트 페이지<br/> - 모임 상세 페이지                                                                             | [GitHub](https://github.com/kkhhjjoo)   |
 | <img src="https://github.com/jian526.png" width="100">    | 김지안 | 팀원, 발표 | - 로그인, 회원가입 페이지<br/> - 모임 등록 페이지<br/> - 모임 수정 페이지<br/> - 모임 조회 페이지                       | [GitHub](https://github.com/jian526)    |
 
 ## ⚙️기술 스택
@@ -67,20 +51,13 @@
 | 분류             | 기술                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **프론트엔드**   | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white) ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)                                                                                 |
-| **상태 관리**    | ![Zustand](https://img.shields.io/badge/Zustand-000000?style=flat-square) ![Axios](https://img.shields.io/badge/Axios-5A29E4?style=flat-square&logo=axios&logoColor=white)                                                                                                                                                                                                                                |
+| **상태 관리**    | ![Zustand](https://img.shields.io/badge/Zustand-000000?style=flat-square)                                                                                                                                                                                                                             |
 | **백엔드/DB**    | ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)                                                                                                                                                                                                                                                                                                    |
 | **API**          | ![Kakao](https://img.shields.io/badge/Kakao_Map_API-FFCD00?style=flat-square&logo=kakao&logoColor=black) ![OpenAI](https://img.shields.io/badge/OpenAI_API-412991?style=flat-square&logo=openai&logoColor=white)                                                                                                                                                                                          |
 | **UI/UX**        | ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white)                                                                                                                                                                                                                                                                                                          |
 | **개발 환경**    | ![VS Code](https://img.shields.io/badge/Visual_Studio_Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)                                                                                                                                                                                                                                                                                |
-| **커뮤니케이션** | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white) ![Discord](https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=discord&logoColor=white) ![Notion](https://img.shields.io/badge/Notion-000000?style=flat-square&logo=notion&logoColor=white) |
+| **협업 툴** | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white) ![Discord](https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=discord&logoColor=white) ![Notion](https://img.shields.io/badge/Notion-000000?style=flat-square&logo=notion&logoColor=white) |
 | **배포**         | ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)                                                                                                                                                                                                                                                                                                       |
-
-## 🛠 개발 환경
-
-| 구분     | 종류                                |
-| -------- | ----------------------------------- |
-| FrontEnd | React, Next.js, CSS Module, Zustand |
-| BackEnd  | MongoDB, Kakao Map API, OpenAI API  |
 
 ## 📚 라이브러리 사용 이유
 
@@ -101,8 +78,8 @@
 
 | 데스크톱                                       | 모바일                                                    |
 | ---------------------------------------------- | --------------------------------------------------------- |
-| <img src="docs/gif/회원가입.gif" width="600"/> | <img src="docs/gif/회원가입_모바일버전.gif" width="200"/> |
-| <img src="docs/gif/로그인.gif" width="600"/>   | <img src="docs/gif/로그인_모바일버전.gif" width="200"/>   |
+| <img src="docs/gif/회원가입.gif" width="500"/> | <img src="docs/gif/회원가입_모바일버전.gif" width="200"/> |
+| <img src="docs/gif/로그인.gif" width="500"/>   | <img src="docs/gif/로그인_모바일버전.gif" width="200"/>   |
 
 ---
 
@@ -115,7 +92,7 @@
 
 | 데스크톱                                     | 모바일                                                  |
 | -------------------------------------------- | ------------------------------------------------------- |
-| <img src="docs/gif/홈화면.gif" width="600"/> | <img src="docs/gif/홈화면_모바일버전.gif" width="200"/> |
+| <img src="docs/gif/홈화면.gif" width="500"/> | <img src="docs/gif/홈화면_모바일버전.gif" width="200"/> |
 
 ---
 
@@ -127,8 +104,8 @@
 
 | 데스크톱                                          | 모바일                                                      |
 | ------------------------------------------------- | ----------------------------------------------------------- |
-| <img src="docs/gif/모임리스트.gif" width="600"/>  | <img src="docs/gif/모임리스트_모바일버전.gif" width="200"/> |
-| <img src="docs/gif/모임리스트2.gif" width="600"/> |                                                             |
+| <img src="docs/gif/모임리스트.gif" width="500"/>  | <img src="docs/gif/모임리스트_모바일버전.gif" width="200"/> |
+| <img src="docs/gif/모임리스트2.gif" width="500"/> |                                                             |
 
 ---
 
@@ -139,7 +116,7 @@
 
 | 데스크톱                                         | 모바일                                                      |
 | ------------------------------------------------ | ----------------------------------------------------------- |
-| <img src="docs/gif/상세페이지.gif" width="600"/> | <img src="docs/gif/상세페이지_모바일버전.gif" width="200"/> |
+| <img src="docs/gif/상세페이지.gif" width="500"/> | <img src="docs/gif/상세페이지_모바일버전.gif" width="200"/> |
 
 ---
 
@@ -151,7 +128,7 @@
 
 | 데스크톱                                       | 모바일                                                    |
 | ---------------------------------------------- | --------------------------------------------------------- |
-| <img src="docs/gif/모임등록.gif" width="600"/> | <img src="docs/gif/모임등록_모바일버전.gif" width="200"/> |
+| <img src="docs/gif/모임등록.gif" width="500"/> | <img src="docs/gif/모임등록_모바일버전.gif" width="200"/> |
 
 ---
 
@@ -163,7 +140,7 @@
 
 | 데스크톱                                       | 모바일                                                    |
 | ---------------------------------------------- | --------------------------------------------------------- |
-| <img src="docs/gif/모임수정.gif" width="600"/> | <img src="docs/gif/모임수정_모바일버전.gif" width="200"/> |
+| <img src="docs/gif/모임수정.gif" width="500"/> | <img src="docs/gif/모임수정_모바일버전.gif" width="200"/> |
 
 ---
 
@@ -174,7 +151,7 @@
 
 | 데스크톱                                       | 모바일                                                    |
 | ---------------------------------------------- | --------------------------------------------------------- |
-| <img src="docs/gif/모임신청.png" width="600"/> | <img src="docs/gif/모임신청_모바일버전.gif" width="200"/> |
+| <img src="docs/gif/모임신청.png" width="500"/> | <img src="docs/gif/모임신청_모바일버전.gif" width="200"/> |
 
 ---
 
@@ -184,7 +161,7 @@
 
 | 데스크톱                                       | 모바일                                                    |
 | ---------------------------------------------- | --------------------------------------------------------- |
-| <img src="docs/gif/모임조회.gif" width="600"/> | <img src="docs/gif/모임조회_모바일버전.gif" width="200"/> |
+| <img src="docs/gif/모임조회.gif" width="500"/> | <img src="docs/gif/모임조회_모바일버전.gif" width="200"/> |
 
 ---
 
@@ -194,7 +171,7 @@
 
 | 데스크톱                                     | 모바일                                                  |
 | -------------------------------------------- | ------------------------------------------------------- |
-| <img src="docs/gif/북마크.gif" width="600"/> | <img src="docs/gif/북마크_모바일버전.gif" width="200"/> |
+| <img src="docs/gif/북마크.gif" width="500"/> | <img src="docs/gif/북마크_모바일버전.gif" width="200"/> |
 
 ---
 
@@ -207,7 +184,7 @@
 
 | 데스크톱                                         | 모바일                                                      |
 | ------------------------------------------------ | ----------------------------------------------------------- |
-| <img src="docs/gif/마이페이지.png" width="600"/> | <img src="docs/gif/마이페이지_모바일버전.png" width="200"/> |
+| <img src="docs/gif/마이페이지.png" width="500"/> | <img src="docs/gif/마이페이지_모바일버전.png" width="200"/> |
 
 ---
 
@@ -220,7 +197,7 @@
 
 | 데스크톱                                         | 모바일                                                      |
 | ------------------------------------------------ | ----------------------------------------------------------- |
-| <img src="docs/gif/관리페이지.gif" width="600"/> | <img src="docs/gif/관리페이지_모바일버전.png" width="200"/> |
+| <img src="docs/gif/관리페이지.gif" width="500"/> | <img src="docs/gif/관리페이지_모바일버전.png" width="200"/> |
 
 ---
 
@@ -231,7 +208,7 @@
 
 | 데스크톱                                         | 모바일                                                      |
 | ------------------------------------------------ | ----------------------------------------------------------- |
-| <img src="docs/gif/지도페이지.gif" width="600"/> | <img src="docs/gif/지도페이지_모바일버전.gif" width="200"/> |
+| <img src="docs/gif/지도페이지.gif" width="500"/> | <img src="docs/gif/지도페이지_모바일버전.gif" width="200"/> |
 
 ---
 
@@ -241,7 +218,7 @@
 
 | 데스크톱                                 | 모바일                                              |
 | ---------------------------------------- | --------------------------------------------------- |
-| <img src="docs/gif/ai.gif" width="600"/> | <img src="docs/gif/ai_모바일버전.gif" width="200"/> |
+| <img src="docs/gif/ai.gif" width="500"/> | <img src="docs/gif/ai_모바일버전.gif" width="200"/> |
 
 ---
 
@@ -251,7 +228,7 @@
 
 | 데스크톱                                   | 모바일                                                |
 | ------------------------------------------ | ----------------------------------------------------- |
-| <img src="docs/gif/채팅.png" width="600"/> | <img src="docs/gif/채팅_모바일버전.png" width="200"/> |
+| <img src="docs/gif/채팅.png" width="500"/> | <img src="docs/gif/채팅_모바일버전.png" width="200"/> |
 
 ---
 
@@ -450,125 +427,6 @@ src/
     ├── notificationStore.ts
     └── userStore.ts
 ```
-
-### 📂 주요 디렉토리 설명
-
-#### 🔐 `/app/(auth)` - 인증 관련 페이지
-
-- **login/** - 이메일 기반 로그인 페이지
-- **signup/** - 회원가입 및 유효성 검사 페이지
-
-#### 🏠 `/app/(main)` - 메인 페이지
-
-- **page.tsx** - 서비스 메인 페이지
-- **components/** - 메인 페이지 전용 컴포넌트
-  - `AiRecommendModal.tsx` - AI 기반 모임 추천 모달
-  - `CategorySection.tsx` - 카테고리별 모임 섹션
-  - `MeetingsContent.tsx` - 모임 리스트 콘텐츠
-
-#### 👁️ `/app/(view)` - 조회 페이지
-
-- **bookmarks/** - 북마크한 모임 목록
-- **history/** - 참여 이력 조회
-
-#### 🧩 `/app/components` - 공통 컴포넌트
-
-- **Header.tsx** - 전역 헤더 (로그인, 메뉴)
-- **Footer.tsx** - 전역 푸터
-- **Filter.tsx** - 모임 필터 컴포넌트
-- **MeetingCard.tsx** - 모임 카드 UI
-- **BookmarkButton.tsx** - 북마크 토글 버튼
-- **Author.tsx** - 작성자 프로필 컴포넌트
-- **DefaultLayout.tsx** - 기본 레이아웃 템플릿
-- **MobileSidebar.tsx** - 모바일 사이드바 메뉴
-
-#### 👥 `/app/meetings` - 모임 관련 페이지
-
-- **page.tsx** - 모임 목록 (검색, 필터링)
-- **add/** - 모임 등록 (제목, 카테고리, 날짜, 장소, 질문지)
-- **[id]/page.tsx** - 모임 상세 정보
-- **[id]/apply/** - 모임 신청 (질문지 답변)
-- **[id]/edit/** - 모임 수정
-
-#### 🗺️ `/app/map` - 지도 페이지
-
-- **page.tsx** - 카카오맵 기반 모임 지도
-- **KakaoMap.tsx** - 카카오맵 컴포넌트
-- **Map.tsx** - 지도 래퍼 컴포넌트
-
-#### 👤 `/app/mypage` - 마이페이지
-
-- **page.tsx** - 사용자 프로필 및 활동 내역
-- **MyPage.tsx** - 마이페이지 메인 컴포넌트
-- **modify/** - 프로필 정보 수정
-
-#### 💬 `/app/chat` - 채팅 페이지
-
-- **page.tsx** - 채팅 메인 페이지
-- **ChatMain.tsx** - 채팅 메인 레이아웃
-- **ChatRoom.tsx** - 개별 채팅방
-- **ChatRoomList.tsx** - 채팅방 목록
-- **MessageBubble.tsx** - 메시지 말풍선
-
-#### 🔔 `/app/notifications` - 알림 페이지
-
-- **page.tsx** - 알림 목록
-- **Notifications.tsx** - 알림 컴포넌트
-- **NotificationItem.tsx** - 개별 알림 아이템
-
-#### 📋 `/app/manage` - 관리 페이지
-
-- **page.tsx** - 내가 만든 모임 관리
-- **ManageContent.tsx** - 관리 콘텐츠
-- **[id]/page.tsx** - 특정 모임 참여자 관리 (승인/거절)
-
-#### ⚡ `/actions` - Server Actions
-
-- **meetings.ts** - 모임 생성/수정/삭제
-- **bookmarks.ts** - 북마크 추가/제거
-- **chat.ts** - 채팅 메시지 전송/조회
-- **manage.ts** - 참여 신청 승인/거절
-- **notification.ts** - 알림 전송/조회
-- **user.ts** - 사용자 정보 조회/수정
-- **ai-recommend.ts** - AI 기반 모임 추천
-- **file.ts** - 이미지 파일 업로드
-
-#### 🔧 `/lib` - API 호출 함수
-
-- **meetings.ts** - 모임 관련 API
-- **bookmarks.ts** - 북마크 API
-- **chat.ts** - 채팅 API
-- **manage.ts** - 관리 API
-- **user.ts** - 사용자 API
-- **common.ts** - 공통 API 유틸리티
-
-#### 🪝 `/hooks` - 커스텀 React Hooks
-
-- **useChat.ts** - 채팅 상태 관리 Hook
-- **useFilter.ts** - 필터 상태 관리 Hook
-- **useNoti.ts** - 알림 상태 관리 Hook
-
-#### 🛠️ `/utils` - 유틸리티 함수
-
-- **apiWithAuth.ts** - 인증 토큰을 포함한 API 호출 래퍼
-
-#### 💾 `/zustand` - 전역 상태 관리
-
-- **userStore.ts** - 사용자 정보 (로그인, 프로필)
-- **meetingStore.ts** - 모임 데이터
-- **bookmarkStore.ts** - 북마크 상태
-- **chatStore.ts** - 채팅 상태
-- **notificationStore.ts** - 알림 상태
-
-#### 📝 `/types` - TypeScript 타입 정의
-
-- **user.ts** - 사용자 관련 타입
-- **meetings.ts** - 모임 관련 타입
-- **bookmarks.ts** - 북마크 타입
-- **chat.ts** - 채팅 타입
-- **manage.ts** - 관리 타입
-- **notification.ts** - 알림 타입
-- **apply.ts** - 신청 타입
 - **kakaomap.ts** - 카카오맵 타입
 - **api.ts** - API 응답 공통 타입
 

@@ -317,117 +317,188 @@
 ## 📁 프로젝트 폴더 구조
 
 ```
-src/
-├── app/
-│   ├── (auth)/
-│   │   ├── login/
+final-07-donghaeng/
+├── 📁 actions/                    # Server Actions
+│   ├── ai-recommend.ts            # AI 추천 액션
+│   ├── bookmarks.ts               # 북마크 CRUD
+│   ├── chat.ts                    # 채팅 액션
+│   ├── file.ts                    # 파일 업로드
+│   ├── manage.ts                  # 모임 관리 액션
+│   ├── meetings.ts                # 모임 CRUD
+│   ├── notification.ts            # 알림 액션
+│   └── user.ts                    # 사용자 액션
+│
+├── 📁 app/                        # Next.js App Router
+│   ├── 📁 (auth)/                 # 인증 그룹
+│   │   ├── 📁 login/              # 로그인
+│   │   │   ├── Login.tsx
+│   │   │   ├── Login.module.css
 │   │   │   └── page.tsx
-│   │   └── signup/
+│   │   └── 📁 signup/              # 회원가입
+│   │       ├── Signup.tsx
+│   │       ├── signup.module.css
 │   │       └── page.tsx
 │   │
-│   ├── (main)/
+│   ├── 📁 (main)/                 # 메인 페이지 그룹
+│   │   ├── AiRecommendModal.tsx
+│   │   ├── CategorySection.tsx
+│   │   ├── MeetingsContent.tsx
+│   │   ├── SearchAiSection.tsx
+│   │   ├── Main.module.css
+│   │   └── page.tsx
+│   │
+│   ├── 📁 (view)/                 # 뷰 전용 그룹
+│   │   ├── 📁 bookmarks/          # 북마크
+│   │   │   ├── BookmarkContent.tsx
+│   │   │   ├── BookmarkMeetingCard.tsx
+│   │   │   ├── BookmarkSwiper.tsx
+│   │   │   ├── Bookmarks.module.css
+│   │   │   └── page.tsx
+│   │   └── 📁 history/            # 지원한 모임 조회
+│   │       ├── HistoryPage.tsx
+│   │       ├── MeetingCard.tsx
+│   │       ├── History.module.css
+│   │       └── page.tsx
+│   │
+│   ├── 📁 chat/                   # 채팅
+│   │   ├── ChatBadge.tsx
+│   │   ├── ChatMain.tsx
+│   │   ├── ChatRoom.tsx
+│   │   ├── ChatRoomItem.tsx
+│   │   ├── ChatRoomList.tsx
+│   │   ├── MessageBubble.tsx
+│   │   ├── *.module.css
+│   │   └── page.tsx
+│   │
+│   ├── 📁 components/              # 공통 컴포넌트
+│   │   ├── Author.tsx              # 채팅 연결 컴포넌트
+│   │   ├── BlankLayout.tsx         # 기본(헤더, 푸터 X)레이아웃
+│   │   ├── BookmarkButton.tsx      # 북마크 버튼 컴포넌트
+│   │   ├── DefaultLayout.tsx       # 기본(헤더, 푸터 O) 레이아웃
+│   │   ├── Filter.tsx              # 필터 컴포넌트
+│   │   ├── Footer.tsx              # 푸터 컴포넌트
+│   │   ├── Header.tsx              # 헤더 컴포넌트
+│   │   ├── MeetingCard.tsx         # 모임 컴포넌트
+│   │   └── MobileSidebar.tsx       # 모바일 사이드바 컴포넌트
+│   │   
+│   │
+│   ├── 📁 manage/                  # 모임 관리
+│   │   ├── ManageContent.tsx       # 내가 등록한 모임
+│   │   ├── ManageSwiper.tsx
+│   │   ├── ManageAllPage.module.css
 │   │   ├── page.tsx
-│   │   └── components/
-│   │       ├── Hamburger.tsx
-│   │       └── AiRecommendModal.tsx
-│   │
-│   ├── (view)/
-│   │   ├── Bookmarks/
-│   │   │   └── page.tsx
-│   │   └── History/
+│   │   └── 📁 [id]/
+│   │       ├── ManageContent.tsx    # 참여자 관리(승인/거절)
+│   │       ├── Manage.module.css
 │   │       └── page.tsx
 │   │
-│   ├── components/
-│   │   ├── Filter.tsx
-│   │   ├── Footer.tsx
-│   │   ├── Header.tsx
-│   │   ├── Author.tsx
-│   │   ├── BookmarkButton.tsx
-│   │   ├── DefaultLayout.tsx
-│   │   ├── MeetingCard.tsx
-│   │   └── MobileSidebar.tsx
+│   ├── 📁 map/                    # 지도
+│   │   ├── KakaoMap.tsx
+│   │   ├── Map.tsx
+│   │   ├── Map.module.css
+│   │   └── page.tsx
 │   │
-│   ├── meetings/
-│   │   ├── [id]/
-│   │   │   ├── apply/
-│   │   │   │   └── page.tsx
-│   │   │   ├── edit/
-│   │   │   │   └── page.tsx
+│   ├── 📁 meetings/               # 모임 리스트
+│   │   ├── Category.tsx
+│   │   ├── FilterMeetingList.tsx
+│   │   ├── MeetingItem.tsx
+│   │   ├── MeetingList.module.css
+│   │   ├── page.tsx
+│   │   ├── 📁 add/                 # 모임 등록
+│   │   │   ├── Add.tsx
+│   │   │   ├── Create.module.css
 │   │   │   └── page.tsx
-│   │   ├── add/
-│   │   │   └── page.tsx
+│   │   └── 📁 [id]/
+│   │       ├── NavigateButton.tsx
+│   │       ├── Detail.module.css
+│   │       ├── page.tsx
+│   │       ├── 📁 apply/           # 모임 신청
+│   │       │   ├── ApplyForm.tsx
+│   │       │   ├── Apply.module.css
+│   │       │   └── page.tsx
+│   │       └── 📁 edit/            # 모임 수정
+│   │           ├── Edit.tsx
+│   │           ├── Edit.module.css
+│   │           └── page.tsx
+│   │
+│   ├── 📁 mypage/                 # 마이페이지
+│   │   ├── MyPage.tsx
+│   │   ├── MyPage.module.css
+│   │   ├── page.tsx
+│   │   └── 📁 modify/[id]/        # 수정 페이지
+│   │       ├── Modify.tsx
+│   │       ├── Modify.module.css
+│   │       └── page.tsx
+│   │
+│   ├── 📁 notifications/          # 알림
+│   │   ├── Notifications.tsx
+│   │   ├── NotificationItem.tsx
+│   │   ├── *.module.css
 │   │   └── page.tsx
 │   │
-│   ├── map/
-│   │   └── page.tsx
+│   ├── 📁 faq/                    # FAQ
+│   ├── 📁 privacy/                # 개인정보처리방침
+│   ├── 📁 terms/                  # 이용약관
 │   │
-│   ├── mypage/
-│   │   ├── modify/
-│   │   │   └── page.tsx
-│   │   └── page.tsx
+│   ├── 📁 style/                  # 전역 스타일
+│   │   ├── base.css
+│   │   ├── reset.css
+│   │   └── style.css
 │   │
-│   ├── notifications/
-│   │   └── page.tsx
-│   │
-│   ├── faq/
-│   │   └── page.tsx
-│   │
-│   ├── manage/
-│   │   └── page.tsx
-│   │
-│   ├── layout.tsx
-│   ├── loading.tsx
-│   ├── error.tsx
-│   ├── not-found.tsx
-│   └── globals.css
+│   ├── error.tsx                  # 에러 페이지
+│   ├── globals.css                # 전역 CSS
+│   ├── layout.tsx                 # 루트 레이아웃
+│   ├── loading.tsx                # 로딩 UI
+│   ├── not-found.tsx              # 404 페이지
+│   ├── robots.ts                  # robots.txt
+│   └── sitemap.ts                 # 사이트맵
 │
-├── lib/
-│   ├── api/
-│   │   ├── auth.ts
-│   │   ├── meeting.ts
-│   │   ├── bookmarks.ts
-│   │   ├── notification.ts
-│   │   ├── chat.ts
-│   │   └── user.ts
-│   │
-│   ├── hooks/
-│   │   ├── useAuth.ts
-│   │   ├── useMeeting.ts
-│   │   └── useBookmark.ts
-│   │
-│   └── utils/
-│       ├── validators.ts
-│       └── format.ts
+├── 📁 docs/                       # 문서/데이터
+│   └── regionData.ts              # 지역 데이터
 │
-├── store/
-│   ├── authStore.ts
-│   ├── userStore.ts
-│   └── meetingStore.ts
+├── 📁 hooks/                      # 커스텀 훅
+│   ├── useChat.ts                 # 채팅 훅
+│   ├── useFilter.ts               # 필터 훅
+│   └── useNoti.ts                 # 알림 훅
 │
-├── types/
-│   ├── auth.ts
-│   ├── meeting.ts
-│   ├── user.ts
-│   ├── notification.ts
+├── 📁 lib/                        # 유틸리티/API 함수
+│   ├── bookmarks.ts
+│   ├── chat.ts
+│   ├── common.ts
+│   ├── manage.ts
+│   ├── meetings.ts
+│   └── user.ts
+│
+├── 📁 public/                     # 정적 파일
+│   ├── 📁 icon/                   # 아이콘
+│   └── 📁 logo/                   # 로고
+│
+├── 📁 types/                      # TypeScript 타입
 │   ├── api.ts
+│   ├── apply.ts
+│   ├── bookmarks.ts
 │   ├── chat.ts
 │   ├── kakaomap.ts
-│   └── manage.ts
+│   ├── manage.ts
+│   ├── meetings.ts
+│   ├── notification.ts
+│   └── user.ts
 │
-├── styles/
-│   └── globals.css
+├── 📁 utils/                      # 유틸리티
+│   └── apiWithAuth.ts             # 인증 API 래퍼
 │
-├── utils/
-│   └── apiWithAuth.ts
+├── 📁 zustand/                    # 상태 관리 스토어
+│   ├── bookmarkStore.ts
+│   ├── chatStore.ts
+│   ├── meetingStore.ts
+│   ├── notificationStore.ts
+│   └── userStore.ts
 │
-└── zustand/
-    ├── bookmarkStore.ts
-    ├── chatStore.ts
-    ├── meetingStore.ts
-    ├── notificationStore.ts
-    └── userStore.ts
+├── .env                           # 환경 변수
+├── next.config.ts                 # Next.js 설정
+├── tsconfig.json                  # TypeScript 설정
+├── eslint.config.mjs              # ESLint 설정
+└── package.json                   # 의존성
 ```
-- **kakaomap.ts** - 카카오맵 타입
-- **api.ts** - API 응답 공통 타입
 
 ---

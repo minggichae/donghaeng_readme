@@ -37,7 +37,7 @@
 - 프로필 정보 수정 (닉네임, 지역, 나이, 성별, 자기소개)
 - 모임 관리하기 (신청자 승인/거절)
 - 북마크 추가/삭제
-- 모임 조회 (참여 전/참여 후/전체)
+- 모임 조회 (전체/참여 전/참여 후)
 
 ### 모임 생명주기 관리
 
@@ -48,7 +48,7 @@
 
 ## 📅 개발 기간
 
-2026.01.14 ~ 2026.02.13
+> 2026.01.14 ~ 2026.02.13
 
 ## 👥 프로젝트 팀 소개
 
@@ -253,58 +253,6 @@
 
 ---
 
-## 🏗️ 시스템 아키텍처
-
-### 기술 구성
-
-- **Frontend**: React 19 + Next.js 16 (App Router)
-- **Styling**: CSS Modules + Tailwind CSS v4
-- **상태 관리**: Zustand (localStorage persist)
-- **서버 통신**: Fetch API + Next.js Server Actions
-- **실시간 통신**: Socket.io (채팅, 알림)
-- **캐시/갱신**: fetch 캐시 태그 + revalidateTag, revalidatePath
-
-### 데이터 흐름
-
-1. **조회**: 서버 컴포넌트에서 모임/사용자 데이터 fetch
-2. **생성/수정/삭제**: Server Action으로 API 호출
-3. **캐시 갱신**: 성공 시 자동으로 캐시 업데이트
-4. **인증**: 로그인 성공 시 Zustand store에 사용자 정보 저장
-5. **실시간**: Socket.io로 채팅 메시지 및 알림 수신
-
-### API 통신
-
-- 모든 요청에 `Client-Id` 헤더 포함
-- 인증이 필요한 요청은 `Authorization: Bearer <token>` 헤더 사용
-- 서버 측에서 권한 검증 수행
-- 401 에러 시 자동 토큰 갱신 (refreshToken 사용)
-
-### Zustand Store 구성
-
-| Store | 역할 |
-| :--- | :--- |
-| `userStore` | 로그인 상태, 사용자 정보, 토큰 관리 |
-| `chatStore` | Socket.io 연결, 채팅방/메시지 상태 |
-| `bookmarkStore` | 북마크 목록, 추가/삭제 상태 |
-| `notificationStore` | 알림 목록, 읽음 상태 |
-| `meetingStore` | 현재 선택된 모임 정보 |
-
-## ♿ 접근성
-
-- WCAG 기준에 따른 스크린리더 지원
-- `aria-label`, `aria-expanded`, `aria-live` 속성 활용
-- 시맨틱 HTML 태그 사용 (nav, main, section)
-- 폼 에러 메시지 접근성 개선
-- 스크린 리더 전용 텍스트 (sr-only) 제공
-
-## 🔐 보안 및 정책
-
-- 인증 필요 기능은 로그인 사용자만 접근 가능
-- 수정/삭제는 작성자 본인만 가능
-- 토큰은 localStorage에 저장
-- HTTPS를 통한 이미지 호스팅 (Cloudinary)
-- 보안 헤더 설정 (X-Content-Type-Options, X-Frame-Options)
-
 ## 🐛 트러블슈팅
 
 | 이름     | 문제점                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | 해결 방법                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
@@ -314,52 +262,26 @@
 | **현주** | 북마크 클릭 시 여러 개가 동시에 선택되는 버그 발생. `git pull`을 받지 않아 최신 코드가 누락됨.                                                                                                                                                                                                                                                                                                                                                                                                             | `git pull`, `git merge`를 통해 최신 코드 동기화 후 해결                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | **지안** | 1. **Git 브랜치 동기화 문제**: `develop` 브랜치에서 `git pull`이 정상적으로 되지 않는 문제 발생<br/>2. **CSS Module `:global` 사용 문제**: CSS Module에서 `:global`을 사용하면서 스타일이 전역으로 적용되어 다른 페이지에도 영향을 주는 문제 발생<br/>3. **로그인 상태 유지 문제**: 로그인 여부를 `useState`로만 판단해 로그인되지 않았을 경우 로그인 페이지로 강제 이동하도록 구현했는데, 새로고침 시 로그인 상태에서도 로그인 화면으로 이동하는 문제 발생. Hydration 이전 상태를 `false`로 인식했기 때문 | 1. **Git 동기화 해결**: rebase 사용 시 발생하는 히스토리 오염 문제를 팀원들에게 공유. 이후 `git pull`이 되지 않는 경우 `rebase` 대신 `merge` 전략을 사용하도록 협업 방식을 정리하여 develop 브랜치와의 버전을 안정적으로 맞춤<br/>2. **CSS 격리**: `:global` 사용을 최소화하고, 필요한 경우 더 구체적인 선택자를 사용하여 적용 범위를 제한. 컴포넌트 단위로 스타일이 격리되도록 구조 개선<br/>3. **Hydration 처리**: `useStore.ts`에 `setHasHydrated`를 추가하여 상태가 hydration된 이후에만 로그인 여부를 판단하도록 수정. 새로고침 시에도 로그인 상태가 정상적으로 유지되도록 개선 |
 
-## 🚀 시작하기
+## 📌 스크럼/회의록
 
-### 환경 변수 설정
+### 2026년 1월
 
-프로젝트 루트에 `.env` 파일을 생성하고 다음 변수를 설정합니다:
+| 일  |                     월                     |                     화                     |                     수                     |                     목                     |                     금                     | 토  |
+| :-: | :----------------------------------------: | :----------------------------------------: | :----------------------------------------: | :----------------------------------------: | :----------------------------------------: | :-: |
+|     |                                            |                                            |                                            |                     1                      |                     2                      |  3  |
+|  4  |                     5                      |                     6                      |                     7                      |                     8                      |                     9                      | 10  |
+| 11  |                     12                     |                     13                     | [14](docs/dailyscrum/0114-데일리스크럼.md) | [15](docs/dailyscrum/0115-데일리스크럼.md) | [16](docs/dailyscrum/0116-데일리스크럼.md) | 17  |
+| 18  | [19](docs/dailyscrum/0119-데일리스크럼.md) | [20](docs/dailyscrum/0120-데일리스크럼.md) | [21](docs/dailyscrum/0121-데일리스크럼.md) | [22](docs/dailyscrum/0122-데일리스크럼.md) | [23](docs/dailyscrum/0123-데일리스크럼.md) | 24  |
+| 25  | [26](docs/dailyscrum/0126-데일리스크럼.md) | [27](docs/dailyscrum/0127-데일리스크럼.md) | [28](docs/dailyscrum/0128-데일리스크럼.md) | [29](docs/dailyscrum/0129-데일리스크럼.md) | [30](docs/dailyscrum/0130-데일리스크럼.md) | 31  |
 
-```env
-NEXT_PUBLIC_CLIENT_ID=your-client-id
-NEXT_PUBLIC_API_URL=https://your-api-url
-AI_API_KEY=your-openai-api-key
-NEXT_PUBLIC_KAKAO_MAP_API_KEY=your-kakao-map-api-key
-NEXT_PUBLIC_NOTI_URL=https://your-notification-url
-NEXT_PUBLIC_PRIVATE_CHAT_URL=https://your-chat-url
-```
+### 2026년 2월
 
-### 설치
-
-```bash
-npm install
-```
-
-### 개발 서버 실행
-
-```bash
-npm run dev
-```
-
-[http://localhost:3000](http://localhost:3000)에서 확인할 수 있습니다.
-
-### 빌드
-
-```bash
-npm run build
-```
-
-### 프로덕션 실행
-
-```bash
-npm start
-```
-
-### 린트 검사
-
-```bash
-npm run lint
-```
+| 일  |                    월                     |                     화                     |                     수                     |                     목                     | 금  | 토  |
+| :-: | :---------------------------------------: | :----------------------------------------: | :----------------------------------------: | :----------------------------------------: | :-: | :-: |
+|  1  | [2](docs/dailyscrum/0202-데일리스크럼.md) | [3](docs/dailyscrum/0203-데일리스크럼.md)  | [4](docs/dailyscrum/0204-데일리스크럼.md)  | [5](docs/dailyscrum/0205-데일리스크럼.md)  |  6  |  7  |
+|  8  | [9](docs/dailyscrum/0209-데일리스크럼.md) | [10](docs/dailyscrum/0210-데일리스크럼.md) | [11](docs/dailyscrum/0211-데일리스크럼.md) | [12](docs/dailyscrum/0212-데일리스크럼.md) | 13  | 14  |
+| 15  |                    16                     |                     17                     |                     18                     |                     19                     | 20  | 21  |
+| 22  |                    23                     |                     24                     |                     25                     |                     26                     | 27  | 28  |
 
 ## 📁 프로젝트 폴더 구조
 
